@@ -1,0 +1,36 @@
+{
+    "name": "aurora/arcanum-php-sdk",
+    "description": "PHP SDK for interacting with the Arcanum API",
+    "type": "library",
+    "license": "MIT", 
+    "authors": [
+        {
+            "name": "Chandler Warren",
+            "email": "chandler.warren@uconn.edu"
+        }
+    ],
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "vlucas/phpdotenv": "^5.4",
+        "pestphp/pest": "^3.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Arcanum\\Sdk\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
