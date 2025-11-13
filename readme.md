@@ -25,7 +25,8 @@ use Arcanum\Sdk\Client;
 // Initialize the client
 $client = new Client(
     apiKey: $_ENV['ARCANUM_API_KEY'],
-    apiSecret: $_ENV['ARCANUM_API_SECRET']
+    apiSecret: $_ENV['ARCANUM_API_SECRET'],
+    baseUrl: $_ENV['ARCANUM_API_BASE_URL']
 );
 
 // Start using -- list all projects, for instance
@@ -44,6 +45,7 @@ use Arcanum\Sdk\Client;
 $client = new Client(
     apiKey: 'your-api-key',              // Required
     apiSecret: 'your-api-secret',        // Required
+    baseUrl: 'https://base_url',        // Required
     httpClient: $customGuzzleClient      // optional,if you want to customize the HTTP client
 );
 ```
@@ -54,6 +56,7 @@ If you don't pass the API key and secret directly, you can use environment varia
 ```bash
 ARCANUM_API_KEY=your-api-key
 ARCANUM_API_SECRET=your-api-secret
+ARCANUM_API_BASE_URL=https://base_url
 ```
 
 ## Common Usage Examples
